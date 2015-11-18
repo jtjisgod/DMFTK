@@ -1,7 +1,7 @@
-package tools.forensic.jtjsoft.com;
+package forensic.command;
 
-import forensic.jtjsoft.com.Cmd;
-import forensic.jtjsoft.com.FileReader;
+import forensic.main.Cmd;
+import forensic.main.FileReader;
 
 public class GetDiskInfo extends Cmd {
 	public GetDiskInfo()	{

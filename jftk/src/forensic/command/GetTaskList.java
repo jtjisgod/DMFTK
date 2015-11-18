@@ -1,10 +1,10 @@
-package tools.forensic.jtjsoft.com;
+package forensic.command;
 
 import java.io.File;
 
-import forensic.jtjsoft.com.Cmd;
-import forensic.jtjsoft.com.ExecReader;
-import forensic.jtjsoft.com.FileReader;
+import forensic.main.Cmd;
+import forensic.main.ExecReader;
+import forensic.main.FileReader;
 
 public class GetTaskList extends Cmd {
 	public GetTaskList()	{

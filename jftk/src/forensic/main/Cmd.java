@@ -1,4 +1,4 @@
-package forensic.jtjsoft.com;
+package forensic.main;
 
 public abstract class Cmd {
 	private String command;

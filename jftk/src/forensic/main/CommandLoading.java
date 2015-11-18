@@ -1,9 +1,9 @@
-package forensic.jtjsoft.com;
+package forensic.main;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import tools.forensic.jtjsoft.com.*;
+import forensic.command.*;
 
 public class CommandLoading {
 
