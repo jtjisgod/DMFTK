@@ -11,7 +11,7 @@ public class Main {
 		
 		CommandLoading.obj.Load();
 
-		System.out.println("< JTJ FORENSIC TOOL KIT >");
+		System.out.println("< DiMigo FORENSIC TOOL KIT >\n\n");
 		System.out.println();
 		
 		do {
