@@ -3,6 +3,7 @@ package forensic.main;
 public abstract class Cmd {
 	private String command;
 	private String instruction;
+	String[] param;
 	
 	public Cmd()	{
 		
@@ -22,6 +23,10 @@ public abstract class Cmd {
 
 	public void setInstruction(String instruction)	{
 		this.instruction = instruction;
+	}
+	
+	public void setParam(String[] param)	{
+		this.param = param;
 	}
 	
 	public abstract void doing();

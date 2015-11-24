@@ -16,13 +16,14 @@ public class Make extends Cmd {
 	}
 	
 	public void doing()	{
-		String value = "";
-		
-		scanner = new Scanner(System.in);
-		
-		System.out.print("\nMake할 폴더를 입력 하세요 : ");
-		
-		value = ExecReader.read(scanner.nextLine());
-		System.out.println("[" + value + "]");
+		System.out.println();
+//		String value = "";
+//		
+//		scanner = new Scanner(System.in);
+//		
+//		System.out.print("\nMake할 폴더를 입력 하세요 : ");
+//		
+//		value = ExecReader.read(scanner.nextLine());
+//		System.out.println("[" + value + "]");
 	}
 }

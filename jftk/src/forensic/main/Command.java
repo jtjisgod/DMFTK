@@ -10,7 +10,7 @@ public class Command {
 	
 	private List<Cmd> commands = new ArrayList<Cmd>();
 	
-	public void excute(String command) throws Exception	{
+	public void excute(String command, String[] param) throws Exception	{
 		if("".equals(command.trim()))	{
 			return;
 		}
@@ -23,7 +23,7 @@ public class Command {
 			return;
 		}
 		Cmd cmd = search(command);
-		cmd.doing();
+		cmd.doing(param);
 	}
 	
 	public Cmd search(String command) throws Exception	{

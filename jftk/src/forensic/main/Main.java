@@ -11,20 +11,33 @@ public class Main {
 		
 		CommandLoading.obj.Load();
 
-		System.out.println("< DiMigo FORENSIC TOOL KIT >\n\n");
+		System.out.println("\n			< DiMigo FORENSIC TOOL KIT >\n");
+		System.out.println("□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□");
+		System.out.println("□□■■■■□□□□■□□□□□■□□■■■■■□■■■■■□□■□□□□■□□");
+		System.out.println("□□■□□□■□□□■■□□□■■□□■□□□□□□□■□□□□■□□□■□□□");
+		System.out.println("□□■□□□□■□□■■□□□■■□□■□□□□□□□■□□□□■□□■□□□□");
+		System.out.println("□□■□□□□■□□■□■□■□■□□■□□□□□□□■□□□□■□■□□□□□");
+		System.out.println("□□■□□□□■□□■□■□■□■□□■■■■□□□□■□□□□■■□□□□□□");
+		System.out.println("□□■□□□□■□□■□□■□□■□□■□□□□□□□■□□□□■□■□□□□□");
+		System.out.println("□□■□□□■□□□■□□□□□■□□■□□□□□□□■□□□□■□□□■□□□");
+		System.out.println("□□■■■■□□□□■□□□□□■□□■□□□□□□□■□□□□■□□□□■□□");
+		System.out.println("□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□");
+		System.out.println();
 		System.out.println();
 		
 		do {
 			System.out.print("\r\nCOMMAND >> ");
 
-			command = scanner.nextLine();
+			command = scanner.nextLine().split(" ")[0];
 			
+			String commandList[] = scanner.nextLine().split(" ");
+					
 			if("quit".equals(command) || "exit".equals(command) || "q".equals(command)){
 				break;
 			}
 
 			try{
-				Command.obj.excute(command);
+				Command.obj.excute(command, commandList);
 			} catch(Exception e)	{
 				System.out.println(e.getMessage());
 			}
