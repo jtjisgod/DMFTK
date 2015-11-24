@@ -17,6 +17,7 @@ public class CommandLoading {
 		commands.add(new GetTaskList());
 		commands.add(new GetUpTime());
 		commands.add(new Make());
+		commands.add(new GenerateCore());
 		Command.obj.load(commands);
 	}
 }
