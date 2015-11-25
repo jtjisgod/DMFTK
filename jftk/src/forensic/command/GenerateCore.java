@@ -18,11 +18,11 @@ public class GenerateCore extends Cmd {
 
     public void doing() {
         for(Integer pid : _pid){
-            output = ExecReader.read("gcore "+pid);
+            output = ExecReader.read("gcore -o ./DumpedFiles/dmftk_dump.pid_is "+pid);
             if(output.contains("Saved corefile"))
-                System.out.println("Core file core."+pid+" generated");
+                System.out.println("[ PID : " + pid + " ] Core file core.\npid : [ " + pid + " ] generated");
             else
-                System.out.println("Failed to create file");
+                System.out.println("[ PID : " + pid + " ] mFailed to create file");
         }
     }
 }

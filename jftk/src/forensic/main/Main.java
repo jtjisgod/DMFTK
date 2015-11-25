@@ -1,5 +1,6 @@
 package forensic.main;
 
+import java.io.IOException;
 import java.util.Scanner;
 
 public class Main {
@@ -11,26 +12,25 @@ public class Main {
 		
 		CommandLoading.obj.Load();
 
-		System.out.println("\n			< DiMigo FORENSIC TOOL KIT >\n");
-		System.out.println("□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□");
-		System.out.println("□□■■■■□□□□■□□□□□■□□■■■■■□■■■■■□□■□□□□■□□");
-		System.out.println("□□■□□□■□□□■■□□□■■□□■□□□□□□□■□□□□■□□□■□□□");
-		System.out.println("□□■□□□□■□□■■□□□■■□□■□□□□□□□■□□□□■□□■□□□□");
-		System.out.println("□□■□□□□■□□■□■□■□■□□■□□□□□□□■□□□□■□■□□□□□");
-		System.out.println("□□■□□□□■□□■□■□■□■□□■■■■□□□□■□□□□■■□□□□□□");
-		System.out.println("□□■□□□□■□□■□□■□□■□□■□□□□□□□■□□□□■□■□□□□□");
-		System.out.println("□□■□□□■□□□■□□□□□■□□■□□□□□□□■□□□□■□□□■□□□");
-		System.out.println("□□■■■■□□□□■□□□□□■□□■□□□□□□□■□□□□■□□□□■□□");
-		System.out.println("□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□□");
-		System.out.println();
-		System.out.println();
+		System.out.print("\033[H\033[2J");
+		System.out.flush();
 		
+		System.out.println("\n			< DiMigo FORENSIC TOOL KIT >\n");
+		System.out.println("		██████╗ ███╗   ███╗███████╗████████╗██╗  ██╗");
+		System.out.println("		██╔══██╗████╗ ████║██╔════╝╚══██╔══╝██║ ██╔╝");
+		System.out.println("		██║  ██║██╔████╔██║█████╗     ██║   █████╔╝ ");
+		System.out.println("		██║  ██║██║╚██╔╝██║██╔══╝     ██║   ██╔═██╗ ");
+		System.out.println("		██████╔╝██║ ╚═╝ ██║██║        ██║   ██║  ██╗");
+		System.out.println("		╚═════╝ ╚═╝     ╚═╝╚═╝        ╚═╝   ╚═╝  ╚═╝");
+		
+		System.out.println();
+				
 		do {
 			System.out.print("\r\nCOMMAND >> ");
 
-			command = scanner.nextLine().split(" ")[0];
-			
-			String commandList[] = scanner.nextLine().split(" ");
+			String scannedString = scanner.nextLine();
+			command = scannedString.split(" ")[0];
+			String commandList[] = scannedString.split(" ");
 					
 			if("quit".equals(command) || "exit".equals(command) || "q".equals(command)){
 				break;

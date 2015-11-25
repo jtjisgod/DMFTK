@@ -23,7 +23,7 @@ public class Command {
 			return;
 		}
 		Cmd cmd = search(command);
-		cmd.doing(param);
+		cmd.doing();
 	}
 	
 	public Cmd search(String command) throws Exception	{
