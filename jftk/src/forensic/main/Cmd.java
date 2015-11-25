@@ -5,9 +5,7 @@ public abstract class Cmd {
 	private String instruction;
 	String[] param;
 	
-	public Cmd()	{
-		
-	}
+	public Cmd() { }
 	
 	public String getCommand()	{
 		return this.command;

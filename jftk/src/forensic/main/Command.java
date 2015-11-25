@@ -11,17 +11,21 @@ public class Command {
 	private List<Cmd> commands = new ArrayList<Cmd>();
 	
 	public void excute(String command, String[] param) throws Exception	{
+		
 		if("".equals(command.trim()))	{
 			return;
 		}
+		
 		if("help".equals(command.trim()))	{
 			help();
 			return;
 		}
+		
 		if("clear".equals(command.trim()))	{
 			ExecReader.read("clear");
 			return;
 		}
+
 		Cmd cmd = search(command);
 		cmd.doing();
 	}

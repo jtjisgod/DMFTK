@@ -19,6 +19,7 @@ public class FileReader {
 		} catch (IOException e) {
 			System.out.println("파읽을 읽을 수 없습니다.");
 		}
+
 		return text;
 	}
 }

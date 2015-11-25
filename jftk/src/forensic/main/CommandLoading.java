@@ -11,7 +11,9 @@ public class CommandLoading {
 	private CommandLoading() {}
 
 	public void Load()	{
+		
 		List<Cmd> commands = new ArrayList<Cmd>();
+
 		commands.add(new GetInformation());
 		commands.add(new GetDiskInfo());
 		commands.add(new GetTaskList());
@@ -19,5 +21,6 @@ public class CommandLoading {
 		commands.add(new GenerateCore());
 		commands.add(new Make());
 		Command.obj.load(commands);
+
 	}
 }
