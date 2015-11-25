@@ -15,6 +15,8 @@ public class GenerateCore extends Cmd {
         super.setCommand("generate-core");
         super.setInstruction("모든 프로세스들에 대한 코어 파일을 생성합니다.");
     }
+    
+    //.
 
     public void doing() {
         for(Integer pid : _pid){
