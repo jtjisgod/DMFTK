@@ -8,11 +8,15 @@ public class Task {
 	private String name;
 	
 	public Task(int pid){
-		
-		this.pid = pid;
-		String data = FileReader.obj.read("/proc/"+pid+"/status");
-		this.ppid = Integer.parseInt(data.split("Ppid:")[1].split("TracerPid")[0]);
-		this.name = data.split("Name:")[1].split("State")[0];
+		try{
+			this.pid = pid;
+			String data = FileReader.obj.read("/proc/"+pid+"/status");
+			this.ppid = Integer.parseInt(data.split("PPid:	")[1].split("TracerPid:")[0]);
+			this.name = data.split("Name:	")[1].split("State")[0];
+		} catch(Exception e){
+			System.out.println("Exception in Task");
+			e.printStackTrace();
+		}
 	}
 	
 	public void display(){

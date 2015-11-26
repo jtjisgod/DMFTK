@@ -30,13 +30,13 @@ public class GetProcessTree extends Cmd {
 			paths = f.listFiles();
 			for(File file : paths)	{
 				try{
+					System.out.println(file.getName());
 					int taskId;
 					taskId = Integer.parseInt(file.getName());
+					System.out.println(taskId);
 					taskList.add(new Task(taskId));
 
-				} catch (NumberFormatException e)	{ 
-					System.out.println("NumberFormatException!!");
-				}
+				} catch (NumberFormatException e)	{ }
 			}
 			for(Task t : taskList){
 				t.display();
