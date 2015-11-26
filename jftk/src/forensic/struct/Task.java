@@ -6,6 +6,7 @@ public class Task {
 	private int pid;
 	private int ppid;
 	private String name;
+	private boolean flag=false;
 	
 	public Task(int pid){
 		try{
@@ -20,7 +21,38 @@ public class Task {
 	}
 	
 	public void display(){
-		System.out.println("[" + this.pid + "]	(PPID " + this.ppid + ")	: " + this.name);
+		System.out.println("[" + this.pid + "] (PPID " + this.ppid + ") : " + this.name);
 	}
-	
+
+	public boolean isFlag() {
+		return flag;
+	}
+
+	public void setFlag(boolean flag) {
+		this.flag = flag;
+	}
+
+	public int getPid() {
+		return pid;
+	}
+
+	public void setPid(int pid) {
+		this.pid = pid;
+	}
+
+	public int getPpid() {
+		return ppid;
+	}
+
+	public void setPpid(int ppid) {
+		this.ppid = ppid;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
 }

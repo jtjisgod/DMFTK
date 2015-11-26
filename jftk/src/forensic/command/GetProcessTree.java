@@ -30,21 +30,32 @@ public class GetProcessTree extends Cmd {
 			paths = f.listFiles();
 			for(File file : paths)	{
 				try{
-					System.out.println(file.getName());
 					int taskId;
 					taskId = Integer.parseInt(file.getName());
-					System.out.println(taskId);
 					taskList.add(new Task(taskId));
 
 				} catch (NumberFormatException e)	{ }
 			}
 			for(Task t : taskList){
-				t.display();
-				System.out.println("===============================");
+				if(t.isFlag()) continue;
+				printList(taskList, t, 0);
 			}
 		} catch(Exception e)	{
 			System.out.println("Exception!!");
 		}
 	}
 	
+	private void printList(List<Task> list, Task t, int cnt){
+		for(int i=0; i<cnt; i++) {
+			if((i+1)==cnt) System.out.printf(" └");
+			else System.out.printf("   ");
+		}
+		t.display();
+		for(int i=0; i<list.size(); i++){
+			if(t.getPid()==(list.get(i)).getPpid()){
+				list.get(i).setFlag(true);
+				printList(list, list.get(i), cnt+1);
+			}
+		}
+	}
 }
