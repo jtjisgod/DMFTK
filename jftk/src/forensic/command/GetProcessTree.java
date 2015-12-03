@@ -18,9 +18,6 @@ public class GetProcessTree extends Cmd {
 	
 	@Override
 	public void doing() {
-		// TODO Auto-generated method stub
-		String value = "";
-		String[] cutting;
 		File f = null;
 		File[] paths;
 		List<Task> taskList = new ArrayList<Task>();
