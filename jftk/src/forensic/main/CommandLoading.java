@@ -16,6 +16,7 @@ public class CommandLoading {
 
 		commands.add(new GetInformation());
 		commands.add(new GetDiskInfo());
+		commands.add(new GetPresentUser());
 		commands.add(new GetProcessTree());
 		commands.add(new GetTaskList());
 		commands.add(new GetUpTime());
