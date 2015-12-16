@@ -20,7 +20,8 @@ public class GetPresentUser extends Cmd {
 			Process b = new ProcessBuilder("w", "/usr/run/utmp").start();
 			BufferedReader stdOut   = new BufferedReader(new InputStreamReader(b.getInputStream()));
 		    BufferedReader stdError = new BufferedReader(new InputStreamReader(b.getErrorStream()));
-		    while((s = stdOut.readLine())!=null) System.out.println(s);
+		    s = stdOut.readLine();
+		    System.out.println(s);
 		    while((s = stdError.readLine())!=null) System.out.println(s);
 		    stdOut.close();
 		    stdError.close();
